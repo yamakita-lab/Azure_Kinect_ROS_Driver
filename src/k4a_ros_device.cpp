@@ -1038,7 +1038,7 @@ void K4AROSDevice::framePublisherThread()
                     // Re-synchronize the header timestamps since we cache the camera calibration message
                     depth_rect_camera_info.header.stamp = capture_time;
                     depth_rect_camerainfo_publisher_->publish(depth_rect_camera_info);
-                    RCLCPP_INFO(this->get_logger(), "%ld", system_clock.now().nanoseconds() - start_time);
+                    // RCLCPP_INFO(this->get_logger(), "%ld", system_clock.now().nanoseconds() - start_time);
                 }
             }
 
